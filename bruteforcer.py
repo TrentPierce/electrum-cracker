@@ -1899,10 +1899,8 @@ def hack(t, d):
 		print balance + ": " + addy
 		if balance == "0":
 				print (balance + ": " + addy + "\t" + seed + "\n")
-				process = subprocess.Popen(["./main"], stdout=devnull, shell=False)
-				process.send_signal(signal.SIGINT)
-
-
+				False
+				
 #for x in range(1,4):#
 #	thread.start_new_thread( hack, ("Thread-1", 10 ) )
 #seed = ecdsa.util.randrange( pow(2,128) )

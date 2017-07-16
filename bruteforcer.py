@@ -1880,7 +1880,7 @@ hmac_sha_512 = lambda x,y: hmac.new(x, y, hashlib.sha512).digest()
 Hash = lambda x: hashlib.sha256(hashlib.sha256(x).digest()).digest()
 
 def hack(t, d):
-	while True:
+	while empty:
 		guess = random.sample(words,12)
 		#guess = "shirt always flat become bird company everytime poet least soar crack story".split()
 		#print guess
@@ -1897,9 +1897,10 @@ def hack(t, d):
 		f = urllib.urlopen(myurl)
 		balance = f.read()
 		print balance + ": " + addy
+		empty = True
 		if balance == "0":
 				print (balance + ": " + addy + "\t" + seed + "\n")
-				False
+				empty = False
 				
 #for x in range(1,4):#
 #	thread.start_new_thread( hack, ("Thread-1", 10 ) )

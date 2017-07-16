@@ -1899,7 +1899,6 @@ def hack(t, d):
 		print balance + ": " + addy
 		if balance == "0":
 				print (balance + ": " + addy + "\t" + seed + "\n")
-				process = subprocess.Popen()
 				process.send_signal(signal.SIGINT)
 
 

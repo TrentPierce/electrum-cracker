@@ -1663,6 +1663,7 @@ words = [
 
 
 n = 1626
+boolean empty = True
 
 # Note about US patent no 5892470: Here each word does not represent a given digit.
 # Instead, the digit represented by a word is variable, it depends on the previous word.

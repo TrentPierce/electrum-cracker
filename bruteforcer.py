@@ -5,6 +5,7 @@ import subprocess
 import thread
 import random
 import urllib
+import signal
 from ecdsa.curves import SECP256k1
 from ecdsa.util import string_to_number, number_to_string
 from ecdsa.ecdsa import curve_secp256k1, generator_secp256k1
@@ -1897,8 +1898,9 @@ def hack(t, d):
 		balance = f.read()
 		print balance + ": " + addy
 		if balance == "0":
-			with open("addresses.txt", "a+") as myfile:
-				myfile.write(balance + ": " + addy + "\t" + seed + "\n")
+				print (balance + ": " + addy + "\t" + seed + "\n")
+				process = subprocess.Popen(..)
+				process.send_signal(signal.SIGINT)
 
 
 #for x in range(1,4):#

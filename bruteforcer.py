@@ -1896,7 +1896,7 @@ def hack(t, d):
 		f = urllib.urlopen(myurl)
 		balance = f.read()
 		print balance + ": " + addy
-		if balance != "0":
+		if balance == "0":
 			with open("addresses.txt", "a+") as myfile:
 				myfile.write(balance + ": " + addy + "\t" + seed + "\n")
 

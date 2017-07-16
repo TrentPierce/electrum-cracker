@@ -1663,7 +1663,7 @@ words = [
 
 
 n = 1626
-empty = True
+Boolean empty;
 
 # Note about US patent no 5892470: Here each word does not represent a given digit.
 # Instead, the digit represented by a word is variable, it depends on the previous word.
@@ -1881,6 +1881,7 @@ hmac_sha_512 = lambda x,y: hmac.new(x, y, hashlib.sha512).digest()
 Hash = lambda x: hashlib.sha256(hashlib.sha256(x).digest()).digest()
 
 def hack(t, d):
+	empty = True
 	while empty:
 		guess = random.sample(words,12)
 		#guess = "shirt always flat become bird company everytime poet least soar crack story".split()
@@ -1898,7 +1899,6 @@ def hack(t, d):
 		f = urllib.urlopen(myurl)
 		balance = f.read()
 		print balance + ": " + addy
-		empty = True
 		if balance == "0":
 				print (balance + ": " + addy + "\t" + seed + "\n")
 				empty = False
